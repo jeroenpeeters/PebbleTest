@@ -11,13 +11,18 @@ PBL_APP_INFO(MY_UUID,
              APP_INFO_STANDARD_APP); //APP_INFO_WATCH_FACE
 
 Window window;
-TextLayer left_layer;
+TextLayer text_layer;
 
 void handle_init(AppContextRef ctx) {
   (void)ctx;
 
   window_init(&window, "Main window");
   window_stack_push(&window, true /* Animated */);
+	
+  text_layer_init(&text_layer, GRect(0, 60, 144 /* width */, 20 /* height */));
+  text_layer_set_text(&text_layer, "Hoi Sander!");
+  text_layer_set_text_alignment(&text_layer, GTextAlignmentCenter);
+  layer_add_child(&window.layer, &text_layer.layer);
 }
 
 
