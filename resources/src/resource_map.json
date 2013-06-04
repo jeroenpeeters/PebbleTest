@@ -1,9 +1,10 @@
 {
     "media": [
         {
-            "defName": "DUMMY",
-            "type": "raw",
-            "file": "resource_map.json"
+            "characterRegex": "[0-9:]",
+            "defName": "FONT_SILK_WONDER_25",
+            "type": "font",
+            "file": "fonts/SILKWONDER.ttf"
         }
     ],
     "friendlyVersion": "VERSION",
